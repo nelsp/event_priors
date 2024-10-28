@@ -1,1 +1,77 @@
-{"winner of the us presidential election": ["trump wins", "11/12/2024", [0.65, 0.6, 0.56, 0.7]], "new highs in bitcoin": ["bitcoin above $75,000 by years end", "12/31/2024", [0.5, 0.45, 0.54, 0.56]], "jets versus patriots": ["jets beat the pats", "10/31/2024", [0.67, 0.2, 0.25]], "wind next week in spi": ["avg wind speed > 15 mph", "11/05/2024", [0.6, 0.45]], "testing new event": ["shows up in list", "10/31/2024", [0.9]]}
+{
+    "name of event": [
+        "state to happen",
+        "date and time",
+        [
+            0.0
+        ]
+    ],
+    "winner of the us presidential election": [
+        "trump wins",
+        "11/12/2024",
+        [
+            0.65,
+            0.6,
+            0.56,
+            0.7,
+            0.66,
+            0.7,
+            0.6,
+            0.46,
+            0.58
+        ]
+    ],
+    "new highs in bitcoin": [
+        "bitcoin above $75,000 by years end",
+        "12/31/2024",
+        [
+            0.5,
+            0.45,
+            0.54,
+            0.56,
+            0.44,
+            0.78,
+            0.8,
+            0.45,
+            0.75
+        ]
+    ],
+    "jets versus patriots": [
+        "jets beat the pats",
+        "10/31/2024",
+        [
+            0.67,
+            0.2,
+            0.25,
+            0.5,
+            0.11,
+            0.02,
+            0.13,
+            0.15
+        ]
+    ],
+    "wind next week in spi": [
+        "avg wind speed > 15 mph",
+        "11/05/2024",
+        [
+            0.6,
+            0.45,
+            0.99
+        ]
+    ],
+    "testing new event": [
+        "shows up in list",
+        "10/31/2024",
+        [
+            0.9,
+            0.87
+        ]
+    ],
+    "test2": [
+        "is in the file",
+        "3/6/2031",
+        [
+            0.99
+        ]
+    ]
+}
