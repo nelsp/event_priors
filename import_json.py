@@ -5,11 +5,6 @@ import json
 with open('output.json', 'r') as f:
     events = json.load(f)
 
-
-print("1. List events")
-print("2. Create event")
-print("3. pick an event")
-
 # Main loop
 while True:
     # Prompt the user for input
@@ -41,9 +36,6 @@ while True:
         print("Invalid choice. Please try again.")
 
 print(events)
-
-with open('output.json', 'w') as f:
-    json.dump(events, f)
 
 # Prompt the user to choose an event
 while True:
@@ -113,8 +105,8 @@ ax.plot(0, max_val, marker='_', color='red', markersize=20)
 ax.plot(0, events[event][2][-1], marker='s', color='red', markersize=10, label='Your guess')
 
 # Customize the plot
-ax.set_ylabel('Value')
-ax.set_title('Error Bar Plot with Min, Max, Mean, and Standard Deviation')
+ax.set_ylabel('Probability')
+ax.set_title(event)
 ax.legend()
 
 # Set y-axis range from 0 to 1
