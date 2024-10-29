@@ -81,7 +81,9 @@ def create_plotly_figure(event, events_data):
         xaxis=dict(showticklabels=False),
         yaxis=dict(range=[0, 1]),
         showlegend=True,
-        legend=dict(orientation='h', yanchor='bottom', y=1.02, xanchor='right', x=1)
+        legend=dict(orientation='h', yanchor='bottom', y=1.02, xanchor='right', x=1),
+        width=600,  # Set the width of the graph
+        height=800  # Set the height of the graph
     )
 
     return fig
@@ -90,29 +92,29 @@ def create_plotly_figure(event, events_data):
 
 # Define the layout of the app
 app.layout = html.Div([
-    html.H1('Event Probability Dashboard'),
+    html.H1('Event Probability Dashboard', style={'fontSize': '30px'}),
     
     dcc.Dropdown(
         id='event-dropdown',
         options=[{'label': k, 'value': k} for k in events_data.keys()],
         value=list(events_data.keys())[0] if events_data else None,
-        style={'width': '50%'}
+        style={'width': '50%', 'fontSize': '20px'}
     ),
     
-    html.Div(id='event-output', style={'margin-top': '40px'}),
+    html.Div(id='event-output', style={'margin-top': '40px', 'fontSize': '18px'}),
     
     html.Div([
         dcc.Input(id='probability-input', type='number', placeholder='Enter probability (0-1)', min=0, max=1, step=0.01),
         html.Button('Add Probability', id='add-probability-button', n_clicks=0)
-    ], id='probability-input-div', style={'display': 'none', 'margin-top': '10px'}),
+    ], id='probability-input-div', style={'display': 'none', 'margin-top': '15px', 'fontSize': '18px'}),
     
-    html.H3('Create New Event'),
-    dcc.Input(id='new-event-name', type='text', placeholder='New Event Name', style={'margin-right': '20px'}),
-    dcc.Input(id='new-event-state', type='text', placeholder='State or Condition', style={'margin-right': '20px'}),
+    html.H1('Create New Event'),
+    html.H3('(e.g.  Interest rates will rise, |  the 10 year bond will be above 5%,  |  by 12/31/2024'),
+    dcc.Input(id='new-event-name', type='text', placeholder='New Event Name', style={'margin-right': '20px', 'fontSize': '16px'}),
+    dcc.Input(id='new-event-state', type='text', placeholder='State or Condition', style={'margin-right': '20px', 'fontSize': '16px'}),
     dcc.Input(id='new-event-when', type='text', placeholder='By When'),
-    html.Button('Create New Event', id='new-event-button', n_clicks=0, style={'margin-top': '20px'}),
-    
-    html.Div(id='new-event-output', style={'margin-top': '20px'}),
+    html.Button('Create New Event', id='new-event-button', n_clicks=0, style={'margin-top': '20px', 'fontSize': '16px'}),
+    html.Div(id='new-event-output', style={'margin-top': '20px', 'fontSize': '16px'}),
     
     # Add this new Div for the graph
     html.Div(id='graph-container', style={'margin-top': '20px', 'width': '50%'})
